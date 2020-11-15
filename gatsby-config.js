@@ -5,7 +5,7 @@ module.exports = {
       name: `Tamie Taniguchi`,
       summary: `思いつきで動くパワフルな行動力を持った大学生`,
     },
-    description: `黄色とかわいいものが大好きなマイペース大学生、谷口民恵のポートフォリオサイトです。`,
+    description: `黄色とかわいいものが大好きなマイペース大学生、谷口民恵のサイトです。`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
   },
   plugins: [
