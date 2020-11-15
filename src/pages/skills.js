@@ -18,6 +18,7 @@ if (typeof window !== `undefined`) {
   GifPlayer = require("react-gif-player")
 }
 
+// トップページ表示用コンポーネント
 export const EasySkills = ({ data }) => {
     const skills = data.skills.edges
 

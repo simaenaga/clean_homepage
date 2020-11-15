@@ -19,6 +19,7 @@ if (typeof window !== `undefined`) {
   GifPlayer = require("react-gif-player")
 }
 
+// トップページ表示用コンポーネント
 export function EasyWorks({ data }) {
   const posts = data.works.edges
   

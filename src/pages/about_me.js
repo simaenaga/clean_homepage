@@ -18,6 +18,8 @@ import {
 function ActivityTag({ children, description }) {
 
 	let flag = true
+
+	// マウスオーバー時に活動タグの詳細を表示
 	function handleMouseOver(e) {
 		e.preventDefault()
 		
@@ -33,15 +35,12 @@ function ActivityTag({ children, description }) {
 
 				style.top = top + "px"
 				style.left = e.clientX + "px"
-				console.log("top:" + style.top, "left:" + style.left)
 				
 				flag = !flag
 
 			}
 			
 		}
-
-
 	}
 	function handleMouseOut(e) {
 		e.preventDefault()
@@ -64,7 +63,6 @@ function ActivityTag({ children, description }) {
 				display: "inline-block",
 				cursor: "default"
 			}}
-			// ref={ref}
 			onMouseOver={handleMouseOver}
 			onMouseOut={handleMouseOut}
 			onFocus={handleMouseOver}
@@ -73,14 +71,13 @@ function ActivityTag({ children, description }) {
 			tabIndex={0}
 		>
 			{children}
-		{/* <MediaQuery query={`(min-width: 816px)`}> */}
 			<div className="action_description">{description}</div>
-		{/* </MediaQuery> */}
 		</div>
 	)
 
 }
 
+// トップページ表示用コンポーネント
 export function EasyAboutMe({ data }) {
 
 	return (
@@ -125,10 +122,10 @@ export function EasyAboutMe({ data }) {
 				<div className="myImg">
 					<span style={{ width: "100%", display: "inline-block", textAlign: "center" }}>
 						<span style={{ fontSize: "14px" }}>
-                      大阪工業大学 情報科学部 情報システム学科<br />
+                      		大阪工業大学 情報科学部 情報システム学科<br />
                             3回生（4回生を休学中）<br />
 						</span>
-						<h2 style={{ fontSize: "18px" }}>谷口 民恵</h2>
+						<h2 style={{ fontSize: "18px", marginTop: "12px" }}>谷口 民恵</h2>
 					</span>
 
 					<img src={myImg} alt="自己イメージ画像　谷口民恵" className="my_image" />

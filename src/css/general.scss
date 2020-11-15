@@ -1,4 +1,6 @@
-// 共通
+/*
+ * 共通
+ */
 @font-face {
     font-family: "mini-wakuwaku-maru";
     src: url("../fonts/mini-wakuwaku-maru.otf")
@@ -8,6 +10,7 @@
     src: url("../fonts/JKG-M_3.ttf");
 }
 
+// フォント
 .en {
   font-family: "mini-wakuwaku-maru";
 }
@@ -16,6 +19,20 @@
   font-family: "JK Gothic M";
 }
 
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3:not(.Q_and_A_title) {
+  font-size: 16px;
+}
+
+// ニューモフィズム
 %NewmorphismBase {
   background: #FCBF4C;
   border-radius: 10px;
@@ -24,12 +41,13 @@ p {
   margin: 0;
 }
 
+// 凸部分
 %ConvexNeumorphism {
   @extend %NewmorphismBase;
   box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
                 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
-// 凹み
+// 凹部分
 %DentNeumorphism {
   @extend %NewmorphismBase;
   box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.1),
@@ -37,13 +55,13 @@ p {
 }
 
 
-// 共通
+// トップへのリンクボタンのアイコン
 .toTop {
   position: relative;
   top: 14px;
   font-size: 40px;
 }
-
+// サイトタイトル
 .headerTitle {
   >.title {
     @extend %ConvexNeumorphism;
@@ -79,11 +97,13 @@ p {
   padding: 12px;
 }
 
+// メイン画像とそのプツンっていうアニメーション
 .header_img {
   margin-bottom: 48px;
   margin: 0 auto;
 
   display: block;
+
   animation: putun 2s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
   -webkit-animation: putun 2s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
   -moz-animation: putun 2s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
@@ -167,9 +187,12 @@ p {
 }
 
 
-
 ul {margin: 0;}
 
+
+/*
+ * メニュー
+ */
 ul.work-link, ul.menu-link {
 	display: flex;
 
@@ -243,7 +266,7 @@ ul.menu-link {
   font-size: 11px;
 }
 
-// ハンバーガーアニメーション
+// メニュー　ハンバーガーアニメーション
 .menu-box span:nth-of-type(1) {
   -webkit-animation: menu-bar01 .75s forwards;
   animation: menu-bar01 .75s forwards;
@@ -376,7 +399,6 @@ ul.menu-link {
   justify-content: space-around;
 
   & li {
-    // height: 61px;
     width: 300px;
   }
   & a {
@@ -384,6 +406,8 @@ ul.menu-link {
     width: 300px;
   }
 }
+
+// メニュー　モーダル時に画面を覆う
 .wrapper {
   width: 100%;
   height: 100%;
@@ -411,8 +435,11 @@ ul.menu-link {
     }
 }
 
-// about me
+/*
+ * about me
+ */
 // MEMO：relativeを決めて、absoluteにすると便利
+// 初めのストーリーフキダシ
 .hukidashi_saying:not(:last-child){
   position: relative;
 
@@ -437,7 +464,7 @@ ul.menu-link {
     background: #FFDEA1;
   }
 }
-
+// before afterのフキダシ
 .hukidashi_b_a {
 	position: relative;
 
@@ -461,6 +488,7 @@ ul.menu-link {
     background: #FFDEA1;
   }
 }
+
 
 .hukidashi_thinking {
   position: relative;
@@ -492,13 +520,8 @@ ul.menu-link {
 .gif_player img{
   margin: 0;
 }
-.resMyImg {
-  width: 250px;
-  text-align: center;
-  & > img {
-    text-align: center;
-  }
-}
+
+// プロフィールの自画像
 .myImg {
   flex-basis: 488px;
   margin: 0 16px;
@@ -578,7 +601,74 @@ ul.menu-link {
   }
 
 }
-// skills
+
+.Q_and_A {
+  border: solid 4px #3a5ce4;
+  border-radius: 10px;
+  position: relative;
+
+  & > h3 {
+    font-family: "mini-wakuwaku-maru";
+    color: #3A5CD4;
+    background-color: #FCBF4C;
+    border-bottom: solid 4px #3A5CD4;
+    width: 80px;
+    text-align: center;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+  }
+  & ul {
+    padding: 32px 16px 16px;
+
+    list-style: none;
+    & li:not(:first-child) {
+      border-top: dotted 4px rgba(192, 152, 236, .5);
+      padding-top: 16px;
+    }
+  }
+}
+
+.my_image {
+  margin-bottom: 0;
+}
+
+
+.action_description {
+  position: absolute;
+  background-color: #404040;
+  color: #f0f0f0;
+  border-radius: 10px;
+  display: none;
+  padding: 4px 10px;
+  max-width: 300px;
+  font-size: 12px;
+  z-index: 1;
+  opacity: .8;
+}
+
+// 未実装：Q&Aを増やしたときに要約を表示するためのスタイル
+.abridgement {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+
+  &--none {
+    position: absolute;
+    background-color: #404040;
+    color: #f0f0f0;
+    border-radius: 10px;
+    
+    padding: 4px 10px;
+
+    z-index: 1;
+  }
+}
+
+/*
+ * skills
+ */
 .marker {
   background: linear-gradient(transparent 60%, #FEE7BC 60%);
 }
@@ -597,6 +687,10 @@ ul.menu-link {
   }
 }
 
+
+/*
+ * works
+ */
 .work {
   height: 240px;
   @extend %card;
@@ -690,7 +784,7 @@ ul.work-link {
   margin: 0;
 }
 
-// pre next
+// pre next ボタン
 .work-link .pn {
   display: none;
 }
@@ -743,83 +837,8 @@ $primary-color: #FCBF4C;
   100% {opacity: 0} /*アニメーション終了時は不透明度100%*/
 }
 
+// トップへのボタンリンク
 .top_link {
   box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
                 3px 3px 5px rgba(0, 0, 0, 0.1);
-}
-
-// About me
-.Q_and_A {
-  border: solid 4px #3a5ce4;
-  border-radius: 10px;
-  position: relative;
-
-  & > h3 {
-    font-family: "mini-wakuwaku-maru";
-    color: #3A5CD4;
-    background-color: #FCBF4C;
-    border-bottom: solid 4px #3A5CD4;
-    width: 80px;
-    text-align: center;
-    position: absolute;
-    top: -20px;
-    left: 20px;
-  }
-  & ul {
-    padding: 32px 16px 16px;
-
-    list-style: none;
-    & li:not(:first-child) {
-      border-top: dotted 4px rgba(192, 152, 236, .5);
-      padding-top: 16px;
-    }
-  }
-}
-
-.my_image {
-  margin-bottom: 0;
-}
-
-
-.action_description {
-  position: absolute;
-  background-color: #404040;
-  color: #f0f0f0;
-  border-radius: 10px;
-  display: none;
-  padding: 4px 10px;
-  max-width: 300px;
-  font-size: 12px;
-  z-index: 1;
-  opacity: .8;
-}
-
-.abridgement {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-
-  &--none {
-    position: absolute;
-    background-color: #404040;
-    color: #f0f0f0;
-    border-radius: 10px;
-    
-    padding: 4px 10px;
-
-    z-index: 1;
-  }
-}
-
-h1 {
-  font-size: 24px;
-}
-
-h2 {
-  font-size: 20px;
-}
-
-h3:not(.Q_and_A_title) {
-  font-size: 16px;
 }
