@@ -188,7 +188,7 @@ const Layout = ({ location, title, children }) => {
         }}
       >
         <header>{header}</header>
-        <main style={{fontFamily: "JK Gothic M", height: "100vh"}}>{children}</main>
+        <main style={{fontFamily: "JK Gothic M", minHeight: "100vh"}}>{children}</main>
         <footer style={{position: "relative"}}>
           <div style={{fontSize: "14px", marginTop: "36px", flexGrow: 1.6, textAlign: "center", padding: "32px"}}>
             <span style={{fontWeight: "bold"}}>© </span>
