@@ -218,7 +218,7 @@ export function EasyAboutMe({ data }) {
 							実際にサイトを実装してみたりした。
 						</p><br />
 
-							東京へ行けば、<br />
+						東京へ行けば、<br />
 						<ul>
 							<li>未経験でもデザイナーの経験が積めるかもしれない</li>
 							<li>技術も進んでおり、交流も活発かもしれない</li>
@@ -264,7 +264,7 @@ function AboutMe({ data, location }) {
 					>
 						<FontAwesomeIcon
 							style={{ marginRight: "5px" }}
-							icon={faCat} />
+						icon={faCat} />
 						これからやりたいこと
 					</h2>
 
@@ -277,7 +277,7 @@ function AboutMe({ data, location }) {
 							</div>
 							<div className="hukidashi hukidashi_thinking">
 								<p>
-								なにか情報発信をして、誰かのためになったり、<br />
+									なにか情報発信をして、誰かのためになったり、<br />
 									誰かを笑顔にしてあげられたらいいな
 								</p>
 							</div>
@@ -293,9 +293,9 @@ function AboutMe({ data, location }) {
 							</div>
 							<div className="hukidashi hukidashi_thinking">
 								<p>
-								快適な生き方を求めて、<br />
-								その時その時を、今までの人生で一番楽しくて幸せであり、<br />
-								正しい選択をしているものだと思いたい
+									快適な生き方を求めて、<br />
+									その時その時を、今までの人生で一番楽しくて幸せであり、<br />
+									正しい選択をしているものだと思いたい
 								</p>
 							</div>
 						</div>
@@ -670,10 +670,11 @@ function AboutMe({ data, location }) {
 						</div>
 						<span style={{ fontSize: "12px" }}>※ カーソルを乗せるorタップして詳細を表示</span><br/>
 						<ActivityTag
-							description="軽い気持ちで知人とともに東京へ、デザインのアルバイトとかインターン探しても全然見つからず苦労。
+							description="
+								軽い気持ちで知人とともに東京へ、デザインのアルバイトとかインターン探しても全然見つからず苦労。
 
-							やっと決まったものの緊急事態宣言でなくなる。
-							何のために東京来たんだろうと落ち込んだが、軽い気持ちで行くのはよくないと教訓になった。
+								やっと決まったものの緊急事態宣言でなくなる。
+								何のために東京来たんだろうと落ち込んだが、軽い気持ちで行くのはよくないと教訓になった。
 							"
 						>
 							上京
